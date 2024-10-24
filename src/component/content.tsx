@@ -11,6 +11,7 @@ export interface socialInfo {
 
 const Content = () => {
   let logoImgSrc = "/images/MainLogo.png";
+
   const [sfName, setsfName] = useState("");
   const [sfPronoun, setsfPronoun] = useState("");
   const [sfTitle, setsfTitle] = useState("");
@@ -37,11 +38,16 @@ const Content = () => {
 
   const [checkedSocial, setCheckedSocial] = useState<socialInfo[]>([]);
 
-  const handlePronounChange = (e) => {
+  const handlePronounChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setsfPronoun(e.target.value);
   };
-  const handleStateChange = (e) => {
+  const handleStateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setsfState(e.target.value);
+  };
+  const reset = () => {
+    console.log("23");
+    setFormattedInfo("");
+    setCheckedSocial([]);
   };
   const formatSocialInfo = () => {
     const socialFields = [
@@ -843,7 +849,13 @@ const Content = () => {
                     editor.
                   </em>
                 </p>
-                <button className="sf-reset" type="reset">
+                <button
+                  className="sf-reset"
+                  type="reset"
+                  onClick={() => {
+                    window.location.reload();
+                  }}
+                >
                   Reset
                 </button>
               </div>
