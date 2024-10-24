@@ -72,7 +72,7 @@ const Content = () => {
       {
         label: "linkedin",
         value: linkedin,
-        src: "/images/facebook.png",
+        src: "/images/linkedin.png",
         link: "https://www.linkedin.com",
       },
     ];
@@ -813,7 +813,21 @@ const Content = () => {
                           />
                         </div>
 
-                        <div className="sf-sm-output sf-doReset"></div>
+                        <div className="sf-sm-output sf-doReset d-flex">
+                          {checkedSocial.map((item) => (
+                            <div key={item.label}>
+                              <a href={item.link}>
+                                <Image
+                                  width={30}
+                                  height={30}
+                                  src={item.src}
+                                  alt="social"
+                                  style={{ margin: "10px" }}
+                                />
+                              </a>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </td>
                   </tr>
