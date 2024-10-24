@@ -1,0 +1,491 @@
+/* Main container */
+
+#sf-main-container {
+  max-width: 1500px;
+
+  margin: 0 auto;
+}
+* {
+  min-height: 0;
+  min-width: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+li,
+ul {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+ul,
+ol {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  /*color: #40444D;
+	*/
+  letter-spacing: 0.05em;
+}
+li {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 1500px) {
+  #sf-main-container {
+    max-width: 100% !important;
+    width: auto;
+  }
+  #sf-content {
+    max-width: 100% !important;
+    width: auto;
+  }
+}
+
+/* Header */
+
+#sf-header {
+  background-color: #0c2340;
+
+  padding: 10px;
+}
+
+#sf-logo {
+  max-width: 250px;
+  margin: 20px;
+}
+
+/* Banner */
+
+#sf-banner {
+  width: 100%;
+
+  max-height: 340px;
+
+  object-fit: cover;
+}
+
+/* Main Content */
+
+#sf-content {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* Columns */
+
+#sf-column-1,
+#sf-column-2 {
+  padding: 20px;
+}
+
+/* Footer */
+
+#sf-footer {
+  background-color: #101f33;
+
+  color: #fff;
+
+  padding: 20px;
+}
+
+h2 {
+  display: inline-block;
+
+  font-size: 2.5rem;
+
+  font-family: "EB Garamond", serif;
+
+  font-weight: 600;
+
+  letter-spacing: 0;
+
+  color: #0c2340;
+
+  margin-bottom: 0.5rem;
+
+  padding-bottom: 1rem;
+
+  border-bottom: 2px dotted #c6b66d;
+}
+
+/* Position relative setting for the container */
+
+.sf-relative {
+  position: relative;
+}
+
+/* Overlay */
+
+.sf-overlay {
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 98%;
+
+  background-color: #0c2340;
+
+  opacity: 0.7;
+
+  z-index: 1;
+}
+
+/* Text */
+
+.sf-banner-text {
+  position: absolute;
+
+  top: 45%;
+
+  left: 10%; /* Starts 10% from the left edge */
+
+  width: 80%; /* Spans 80% of the banner */
+
+  transform: translateY(-50%);
+
+  font-size: 75px;
+
+  font-family: "EB Garamond", serif;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.sf-banner-text h1 {
+  font-size: 75px;
+  color: white;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.SF-mainTable {
+  outline: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: transparent;
+}
+
+.sf-name {
+  font-weight: 800;
+}
+
+/* Custom Navigation Bar Styling */
+.navbar {
+  min-height: 75px; /* Set a minimum height for the navbar */
+  max-height: 100px; /* Set a maximum height for the navbar */
+  font-size: 1rem;
+  background-color: #2e598c; /* Set the background color */
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #fff; /* Set the color of the text */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  padding: 1rem 1.5rem; /* Add appropriate padding to each link */
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #9fbce0; /* Change color for hover and focus states */
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: white;
+}
+
+/* Make sure that logo fits well within the navbar if it's there */
+#sf-logo {
+  max-height: 100px;
+  padding: 10px; /* Adjust padding as necessary */
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 991.98px) {
+  /* Adjust navbar toggler color */
+  .navbar-light .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Light border for the toggler */
+  }
+
+  /* Ensure the navbar-brand and navbar-toggler are vertically aligned */
+  .navbar-brand,
+  .navbar-toggler {
+    align-items: center;
+    display: flex;
+  }
+
+  /* Navbar link padding and display adjustments */
+  .navbar-light .navbar-nav .nav-link {
+    padding: 0.5rem 1rem; /* Reduce padding for smaller screens */
+    display: block; /* Ensure links take up the full width */
+  }
+
+  /* Make the collapsed navbar menu items fill the screen width */
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  /* Style adjustments for the collapsible navbar menu */
+  .navbar-collapse.collapsing,
+  .navbar-collapse.show {
+    background-color: #2e598c; /* Background color for the open menu */
+    padding-left: 0; /* Remove padding if any */
+    padding-right: 0; /* Remove padding if any */
+    z-index: 1031;
+    margin-top: 5px;
+  }
+
+  /* Vertically center the items in the collapsible menu */
+  .navbar-nav {
+    align-items: center;
+  }
+
+  /* Adjust the navbar height on mobile when collapsed */
+  .navbar {
+    min-height: 50px; /* Shorter min-height */
+    max-height: 75px; /* Shorter max-height */
+  }
+
+  .sf-banner-text h1 {
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  #sf-logo {
+    max-width: 80vw;
+    padding-left: 20vw;
+    max-height: 20vw;
+  }
+}
+
+.accordion-body {
+  padding: 20px;
+}
+
+ol {
+  padding-left: 40px;
+}
+
+.accordion-header {
+  width: 100%;
+}
+#sf-logo {
+  display: block;
+  /* margin: 0;
+  max-width: 250px; */
+}
+#sf-footer {
+  background-color: #101f33;
+  color: #fff;
+  padding: 20px;
+}
+footer {
+  background: #101f33;
+  padding: 2rem 0 0.25rem 0;
+}
+
+footer .wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2em 1em 0em 1em;
+}
+footer .address .addressLink {
+  display: block;
+  font-family: "Open-sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-left: 25px;
+  letter-spacing: 0.03rem;
+  color: #fff;
+  margin-top: 1.25rem;
+  text-decoration: none;
+}
+
+footer .address span.fas {
+  display: inline-block;
+  float: left;
+  text-decoration: none;
+  color: #c6b66d;
+  margin-right: 0.6rem;
+}
+footer .address .phone {
+  display: block;
+  font-family: "Open-sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 0.35rem;
+  text-decoration: none;
+}
+
+footer .address .addressLink:hover,
+footer .address .phone:hover,
+footer .address .addressLink:focus,
+footer .address .phone:focus {
+  text-decoration: underline;
+}
+footer .social-icons {
+  margin-top: 1.15rem;
+}
+footer .social-icons a:focus {
+  outline: 1px solid #fff;
+}
+footer .social-icons span.fab {
+  border-radius: 50%;
+  color: #ffffff;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  color: #e1e1e1;
+}
+footer .social-icons span:not(.fab) {
+  position: absolute;
+  left: -999999px;
+  color: #ffffff;
+}
+footer .social-icons span.fa-facebook-square {
+}
+footer .social-icons span.fa-instagram {
+}
+footer .social-icons span.fa-instagram:before {
+  margin-left: -3px;
+}
+footer .social-icons span.fa-flickr {
+  background: #ff0084;
+}
+footer .social-icons span.fa-flickr:before {
+  margin-left: -2px;
+}
+footer ul.footerLinks {
+  list-style: none;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+footer ul.footerLinks li {
+  margin-bottom: 0.25rem;
+}
+footer ul.footerLinks li a {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+footer .address span.fa-map-marker-alt {
+  padding-top: 3px;
+}
+footer .address span.fa-phone {
+  padding-top: 8px;
+}
+footer ul.footerLinks li a:focus,
+footer ul.footerLinks li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+footer .column-title {
+  display: block;
+  font-family: "EB Garamond", serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+footer .subfooter {
+  margin-top: 4rem;
+}
+
+footer ul.subfooterLinks {
+  list-style: none;
+}
+footer ul.subfooterLinks li {
+  line-height: 1;
+  display: inline-block;
+  padding: 0 0.35rem;
+}
+footer ul.subfooterLinks li:not(:last-child) {
+  border-right: 1px solid #ffffff;
+}
+footer ul.subfooterLinks li a {
+  font-family: "Open-sans", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: #fff;
+}
+footer ul.subfooterLinks li a:focus,
+footer ul.subfooterLinks li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+@media all and (max-width: 1060px) {
+  footer {
+    padding: 1rem;
+  }
+  footer .col3 {
+    float: none;
+    width: 100%;
+  }
+  footer .right {
+    text-align: left;
+  }
+  footer span.column-title {
+    margin-bottom: 1em;
+  }
+  footer a.logo img {
+    display: block;
+    margin: 0;
+    max-width: 250px;
+  }
+  footer .address,
+  footer .social-icons {
+    text-align: left;
+  }
+  footer ul.footerLinks {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+  footer .social-icons {
+    margin-bottom: 2em;
+  }
+  footer span.copyright {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  footer .subfooter {
+    margin-top: 2rem;
+  }
+}
